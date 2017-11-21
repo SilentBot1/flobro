@@ -11,7 +11,6 @@
     "message": "Sometimes it's nice to have a floating browser window on your screen. With Floating Browser Window you can do this!",
     "description": "The description of the application, displayed in the web store."
   },
-
   "appLabelUrl": {
     "message": "URL",
     "description": "The text of label-element of URL field on the options page."
@@ -36,7 +35,14 @@
     "message": "Close",
     "description": "The text of tooltop of the close button."
   },
-
+  "appLabelForward": {
+    "message": "Forward",
+    "description": "The text of tooltop of the forward button."
+  },
+  "appLabelBack": {
+    "message": "Back",
+    "description": "The text of tooltop of the back button."
+  },
   "appPlaceholderUrl": {
     "message": "Hit Enter to save",
     "description": "The label of the URL field on the options page."
@@ -45,16 +51,14 @@
     "message": "Save",
     "description": "The label of save button on the options page."
   },
-
   "appAlertSomethingWrong": {
     "message": "Something went wrong.",
     "description": "The text shown when something goes wrong."
-  }  ,
+  },
   "appTipSetDifferentUrl": {
     "message": "Hit CTRL + N in the future to set a different URL.",
     "description": "The text shown as tip when a user leaves the options page the first time."
   },
-
   "appMiscYouAreAmazing": {
     "message": "You are amazing! Thanks to you I can make this app better every time!",
     "description": "Text shown in console when user enables tracking."
@@ -63,5 +67,4 @@
     "message": "Consider turning tracking on. I use tracking to improve the app. Thanks to tracking I can see what errors occur without you having to submit an error report. The app NEVER collects personal data.",
     "description": "Text shown in console when user disables tracking."
   }
-
 }

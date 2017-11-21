@@ -11,6 +11,8 @@ document.querySelectorAll('.locale').forEach(function(locale){ locale.innerText 
 // Exception for element who can't use .locale
 document.getElementById('minimize-window-button').title = chrome.i18n.getMessage('appLabelMinimize');
 document.getElementById('close-window-button').title = chrome.i18n.getMessage('appLabelClose');
+document.getElementById('back-window-button').title = chrome.i18n.getMessage('appLabelBack');
+document.getElementById('forward-window-button').title = chrome.i18n.getMessage('appLabelForward');
 document.getElementById('input-request-url').placeholder = chrome.i18n.getMessage('appPlaceholderUrl');
 
 // hotkeys

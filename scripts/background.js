@@ -21,6 +21,8 @@ function createWindow(param) {
                 buttonsObj = appwindow.contentWindow.document.getElementById('buttons'),
                 closeObj = appwindow.contentWindow.document.getElementById('close-window-button'),
                 minimizeObj = appwindow.contentWindow.document.getElementById('minimize-window-button'),
+                backObj = appwindow.contentWindow.document.getElementById('back-window-button'),
+                forwardObj = appwindow.contentWindow.document.getElementById('forward-window-button'),
                 backgroundObj = appwindow.contentWindow.document.getElementById('background'),
                 timeout = null,
                 helpOpened = false;
@@ -41,6 +43,20 @@ function createWindow(param) {
                     clearInterval(checkBounds);
                 }
             }, 250);
+            
+            forwardObj.onclick = function () {
+                webview = appwindow.contentWindow.document.getElementById('panel-container');
+                if(webview.canGoForward()){
+                  webview.forward();
+                }
+            };
+
+            backObj.onclick = function () {
+                webview = appwindow.contentWindow.document.getElementById('panel-container');
+                if(webview.canGoBack()){
+                  webview.back();
+                }
+            };
 
             closeObj.onclick = function () {
                 appwindow.contentWindow.close();
@@ -55,8 +71,9 @@ function createWindow(param) {
                     appwindow.fullscreen();
                 }
             };
-
-            backgroundObj.style.display = 'none';
+            if(backgroundObj){
+                backgroundObj.style.display = 'none';
+            }
             buttonsObj.classList.add('fadeout');
 
             bodyObj.onmousemove = function () {

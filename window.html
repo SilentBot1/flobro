@@ -2,38 +2,55 @@
 <html>
 <head>
     <title>Floating Browser Window</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link href="styles/style.css" rel="stylesheet">
 </head>
-<body id="WindowView" style="-webkit-app-region: drag">
+<body id="WindowView">
     <webview class="background" id="panel-container" src="about:blank" partition="persist:framelessapps" frameborder="0"></webview>
-    <div id="buttons" class="position" style="-webkit-app-region: no-drag">
-        <div id="background" class="background"></div>
-        <div id="panel-container" class="panel-container">
-            <div class="move-right">
-
-                <button class="window-button" title="Minimize" id="minimize-window-button">
-                    <svg enable-background="new 0 0 36 36" height="100%" version="1.1" viewBox="0 0 36 36" width="100%">
+    <div class="position" id="buttons">
+        <div class="panel-container" id="panel-container">
+            <div class="move-left">
+                <button class="window-button" id="back-window-button" title="Back">
+                    <svg height="60%" version="1.1" viewbox="0 0 1792 1792" width="60%">
                         <defs>
-                            <path id="fyt-svg-5" d="M 24.5 22.241 L 24.5 25.241 L 12.5 25.241 L 12.5 22.241"/>
+                            <path d="M1427 301l-531 531 531 531q19 19 19 45t-19 45l-166 166q-19 19-45 19t-45-19l-742-742q-19-19-19-45t19-45l742-742q19-19 45-19t45 19l166 166q19 19 19 45t-19 45z" id="fyt-svg-1"></path>
                         </defs>
-                        <use class="ytp-svg-shadow" stroke="#000" stroke-opacity=".15" stroke-width="2px" xlink:href="#fyt-svg-5"></use>
-                        <use class="ytp-svg-fill" fill="#fff" xlink:href="#fyt-svg-5"></use>
+                        <use class="ytp-svg-shadow" stroke="#000" stroke-opacity=".15" stroke-width="2px" xlink:href="#fyt-svg-1" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                        <use class="ytp-svg-fill" fill="#fff" xlink:href="#fyt-svg-1" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
                     </svg>
                 </button>
-
-                <button class="window-button" title="Close" id="close-window-button">
-                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" height="100%" version="1.1" viewBox="0 0 36 36" width="100%">
+                <button class="window-button" id="forward-window-button" title="Forward">
+                    <svg height="60%" version="1.1" viewbox="0 0 1792 1792" width="60%">
                         <defs>
-                            <path id="fyt-svg-1" d="M25.95,12.65 L20.65,17.95L25.95,23.25L23.8,25.4L18.5,20.1L13.2,25.4L11.05,23.25L16.35,17.95L11.05,12.65L13.2,10.5L18.5,15.8L23.8,10.5"></path>
+                            <path d="M1363 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45l166-166q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z" id="fyt-svg-2"></path>
                         </defs>
-                        <use class="ytp-svg-shadow" stroke="#000" stroke-opacity=".15" stroke-width="2px" xlink:href="#fyt-svg-1"></use>
-                        <use class="ytp-svg-fill" fill="#fff" xlink:href="#fyt-svg-1"></use>
+                        <use class="ytp-svg-shadow" stroke="#000" stroke-opacity=".15" stroke-width="2px" xlink:href="#fyt-svg-2" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                        <use class="ytp-svg-fill" fill="#fff" xlink:href="#fyt-svg-2" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="move-right">
+                <button class="window-button" id="minimize-window-button" title="Minimize">
+                    <svg height="100%" version="1.1" viewbox="0 0 36 36" width="100%">
+                        <defs>
+                            <path d="M 24.5 22.241 L 24.5 25.241 L 12.5 25.241 L 12.5 22.241" id="fyt-svg-3"></path>
+                        </defs>
+                        <use class="ytp-svg-shadow" stroke="#000" stroke-opacity=".15" stroke-width="2px" xlink:href="#fyt-svg-3" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                        <use class="ytp-svg-fill" fill="#fff" xlink:href="#fyt-svg-3" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                    </svg>
+                </button>
+                <button class="window-button" id="close-window-button" title="Close">
+                    <svg height="100%" version="1.1" viewbox="0 0 36 36" width="100%">
+                        <defs>
+                            <path d="M25.95,12.65 L20.65,17.95L25.95,23.25L23.8,25.4L18.5,20.1L13.2,25.4L11.05,23.25L16.35,17.95L11.05,12.65L13.2,10.5L18.5,15.8L23.8,10.5" id="fyt-svg-4"></path>
+                        </defs>
+                        <use class="ytp-svg-shadow" stroke="#000" stroke-opacity=".15" stroke-width="2px" xlink:href="#fyt-svg-4"></use>
+                        <use class="ytp-svg-fill" fill="#fff" xlink:href="#fyt-svg-4"></use>
                     </svg>
                 </button>
             </div>
         </div>
     </div>
-<script src="scripts/google-analytics-bundle.js"></script>
-<script src="scripts/window.js"></script>
+    <script src="scripts/google-analytics-bundle.js"></script> 
+    <script src="scripts/window.js"></script>
 </body>
 </html>

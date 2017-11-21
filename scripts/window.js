@@ -16,7 +16,7 @@ document.getElementById('close-window-button').title = chrome.i18n.getMessage('a
 // hotkeys
 window.addEventListener('keydown', function(e) {
     // Ctrl+R or F5
-    if (e.ctrlKey && e.keyCode == 82 || e.keyCode == 115) {
+    if (e.ctrlKey && e.keyCode == 82 || e.keyCode == 116) {
         var ReloadApp = analytics.EventBuilder.builder()
             .category('App')
             .action('Reload')
@@ -183,6 +183,9 @@ webview.addEventListener('permissionrequest', function(e) {
     if (e.permission === 'download') {
         e.request.allow();
     }
+    if (e.permission === 'fullscreen') {
+        e.request.allow()
+    }
 });
 
 // open cached links
@@ -224,3 +227,4 @@ window.addEventListener('load', function() {
 
 
 });
+
